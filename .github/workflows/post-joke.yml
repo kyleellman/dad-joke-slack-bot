@@ -3,6 +3,8 @@ name: post-joke
 on:
   workflow_dispatch:
     inputs: {}
+  schedule:
+    - cron: "0 18-23 * * 1-5"
 
 jobs:
   run:
