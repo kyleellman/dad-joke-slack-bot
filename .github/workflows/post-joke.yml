@@ -8,10 +8,11 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - name: run
+      - name: install-go
         uses: actions/setup-go@v2
         with:
           go-version: 1.14
+      - name: run
         env:
           TOKEN: ${{ $secrets.TOKEN }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
